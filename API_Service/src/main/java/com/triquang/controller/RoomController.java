@@ -72,6 +72,7 @@ public class RoomController {
 	}
 
 
+
 	@GetMapping("/roomTypes")
 	public List<String> getRoomTypes() {
 		return roomService.getAllRoomTypes();
