@@ -9,7 +9,6 @@ export const AddRoom = () => {
         roomType: "",
         roomPrice: ""
     })
-
     const [imagePreview, setImagePreview] = useState("");
     const [successMessage, setSuccessMessage] = useState("");
     const [errorMessage, setErrorMessage] = useState("");

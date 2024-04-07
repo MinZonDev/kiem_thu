@@ -53,8 +53,8 @@ public class RoomController {
 
 	@PostMapping("/addNewRoom")
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
-	public ResponseEntity<RoomResponse> addNewRooma(@RequestParam("image") MultipartFile image,
-			@RequestParam("roomType") String roomType, @RequestParam("roomPrice") BigDecimal roomPrice) {
+	public ResponseEntity<RoomResponse> addNewRoom(@RequestParam("image") MultipartFile image,
+												   @RequestParam("roomType") String roomType, @RequestParam("roomPrice") BigDecimal roomPrice) {
 
 		Supplier<ResponseEntity<RoomResponse>> addNewRoomSupplier = () -> {
 			try {
@@ -70,6 +70,7 @@ public class RoomController {
 
 		return addNewRoomSupplier.get();
 	}
+
 
 	@GetMapping("/roomTypes")
 	public List<String> getRoomTypes() {
